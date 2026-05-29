@@ -1,0 +1,53 @@
+﻿<Window x:Class="CalcApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Калькулятор чаевых"
+        Height="350"
+        Width="400">
+
+    <Grid Margin="10">
+
+        <StackPanel>
+
+            <!-- Сумма счета -->
+            <TextBlock Text="Сумма счета:" Margin="0,0,0,5"/>
+            <TextBox x:Name="BillTextBox"
+                     Height="25"
+                     Margin="0,0,0,10"/>
+
+            <!-- Количество гостей -->
+            <TextBlock Text="Количество гостей:" Margin="0,0,0,5"/>
+            <TextBox x:Name="GuestsTextBox"
+                     Height="25"
+                     Margin="0,0,0,10"/>
+
+            <!-- Процент чаевых -->
+            <TextBlock Text="Процент чаевых:" Margin="0,0,0,5"/>
+
+            <ComboBox x:Name="TipComboBox"
+                      Height="25"
+                      Margin="0,0,0,15">
+
+                <ComboBoxItem Content="0%"/>
+                <ComboBoxItem Content="5%"/>
+                <ComboBoxItem Content="10%"/>
+                <ComboBoxItem Content="15%"/>
+
+            </ComboBox>
+
+            <!-- Кнопка -->
+            <Button x:Name="CalculateButton"
+                    Content="Рассчитать"
+                    Height="35"
+                    Click="CalculateButton_Click"
+                    Margin="0,0,0,15"/>
+
+            <!-- Результат -->
+            <TextBlock x:Name="ResultTextBlock"
+                       FontSize="16"
+                       TextWrapping="Wrap"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
